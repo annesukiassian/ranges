@@ -8,15 +8,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number");
         int inputNumber = scanner.nextInt();
-        if (inputNumber >= 0 && inputNumber <= 44) {
-            System.out.println("The number is in 0->44 range");
-        } else if (inputNumber >= 45 && inputNumber <= 89) {
-            System.out.println("The number is in 45->89 range");
-        } else if (inputNumber >= 90 && inputNumber <= 134) {
-            System.out.println("The number is in 45->89 range");
-        } else {
-            System.out.println("The number is out of range");
+        int result = (inputNumber / 100) + 1;
+        switch (result) {
+            case 1 -> System.out.println("The number is in 0->99 range");
+            case 2 -> System.out.println("The number is in 100->199 range");
+            case 3 -> System.out.println("The number is in 200->299 range");
+            default -> System.out.println("The number is out of range");
         }
-
     }
 }
